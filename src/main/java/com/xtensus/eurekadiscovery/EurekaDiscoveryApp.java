@@ -15,6 +15,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
+import org.springframework.core.annotation.Order;
 import org.springframework.core.env.Environment;
 import tech.jhipster.config.DefaultProfileUtil;
 import tech.jhipster.config.JHipsterConstants;
@@ -22,6 +23,7 @@ import tech.jhipster.config.JHipsterConstants;
 @SpringBootApplication
 @EnableConfigurationProperties({ ApplicationProperties.class })
 @EnableEurekaServer
+@Order(1)
 public class EurekaDiscoveryApp {
 
     private static final Logger log = LoggerFactory.getLogger(EurekaDiscoveryApp.class);
